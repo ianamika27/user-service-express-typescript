@@ -7,10 +7,13 @@ user service developed using typescript
 create folder user-service-typescript
 cd existing_repo
 git init
-git remote add origin https://gitlab.com/lingeshmouleeshwaran/user-service-typescript.git
+git remote add origin https://github.com/ianamika27/user-service-express-typescript.git
 git branch -M main
 git pull origin main
 
+
+## To Run
+yarn start
 
 ## Authors and acknowledgment
 anamikait27@gmail.com

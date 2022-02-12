@@ -1,6 +1,6 @@
 # user-service-typescript
 
-user service developed using typescript
+User Authentication Service using express-typescript
 
 ## Getting started
 
@@ -23,6 +23,6 @@ For open source projects, say how it is licensed.
 
 ## Project status
 
-Current Working Functionality
-
 Signin & Signup using email
+Update Password
+Forget & Reset Password (using email link)
