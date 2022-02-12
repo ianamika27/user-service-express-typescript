@@ -1,5 +1,5 @@
-import * as mongoose from 'mongoose';
-import * as bluebird from 'bluebird';
+import mongoose from "mongoose";
+import bluebird from 'bluebird';
 import { MongoError } from 'mongodb';
 
 import Locals from './Locals';

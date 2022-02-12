@@ -1,7 +1,8 @@
-import * as express from 'express';
+import express from "express";
 
 import Locals from './Locals';
-
+import Routes from './Routes';
+import Bootstrap from '../middlewares/Bootstrap';
 
 class Express {
     /**
@@ -16,12 +17,27 @@ class Express {
         this.express = express();
 
         this.mountDotEnv();
-        
+        this.mountMiddlewares();
+        this.mountRoutes();        
     }
 
     private mountDotEnv (): void {
         this.express = Locals.init(this.express);
     }
+
+    /**
+	 * Mounts all the defined middlewares
+	 */
+	private mountMiddlewares (): void {
+		this.express = Bootstrap.init(this.express);
+	}
+
+    /**
+	 * Mounts all the defined routes
+	 */
+	private mountRoutes (): void {
+		this.express = Routes.mountAuth(this.express);
+	}
 
     /**
      * Starts the express server
